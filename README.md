@@ -45,10 +45,10 @@ Get-FileHash .\WenWen_Setup_v1.5.20.exe -Algorithm SHA256
 Get-AuthenticodeSignature .\WenWen_Setup_v1.5.20.exe | Format-List Status,StatusMessage,SignerCertificate
 ```
 
-Expected SHA-256 for the official v1.5.20 installer (87,867,072 bytes):
+Expected SHA-256 for the official v1.5.20 installer (87,845,212 bytes):
 
 ```text
-716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC
+DB7664DD60BCBBA4EFC87D41443E2C36607AA6CEA046D801E1D67F9A3031A20F
 ```
 
 `Status` is expected to be `NotSigned` until a trusted code-signing certificate is issued. Full checks: [docs/VERIFICATION.md](docs/VERIFICATION.md).

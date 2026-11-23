@@ -15,8 +15,8 @@
 - Bumped client, executable metadata, and NSIS installer version to `1.5.20.0`.
 - Official installer:
   <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
-  · 87,867,072 bytes
-  · SHA-256 `716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC`
+  · 87,845,212 bytes
+  · SHA-256 `DB7664DD60BCBBA4EFC87D41443E2C36607AA6CEA046D801E1D67F9A3031A20F`
   · `NotSigned`.
 - Prepared Store-identity MSIX `WenWen_1.5.20.0_x64_store.msix`
   (113,699,326 bytes · SHA-256

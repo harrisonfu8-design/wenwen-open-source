@@ -10,9 +10,9 @@ public tree. See [OPEN_SOURCE_SCOPE.md](OPEN_SOURCE_SCOPE.md).
 
 | Item | Value |
 | --- | --- |
-| Download | <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe?v=20261123d> |
-| Size | 87,867,072 bytes |
-| SHA-256 | `716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC` |
+| Download | <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe?v=20261123e> |
+| Size | 87,845,212 bytes |
+| SHA-256 | `DB7664DD60BCBBA4EFC87D41443E2C36607AA6CEA046D801E1D67F9A3031A20F` |
 | Authenticode | `NotSigned` |
 
 The installer shows a privacy policy page and requires the consent checkbox

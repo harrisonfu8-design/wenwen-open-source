@@ -63,7 +63,7 @@ illustrate the product.
 ## Download and verification
 
 - Official installer: <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
-- SHA-256: `716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC`
+- SHA-256: `DB7664DD60BCBBA4EFC87D41443E2C36607AA6CEA046D801E1D67F9A3031A20F`
 - Verification: <https://github.com/harrisonfu8-design/wenwen-open-source/blob/main/docs/VERIFICATION.md>
 
 ## Signing status — please state accurately
