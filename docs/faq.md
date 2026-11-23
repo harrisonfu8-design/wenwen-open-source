@@ -2,7 +2,7 @@
 
 ## Is WenWen code-signed?
 
-No. The current official build (v1.5.19) is `NotSigned`. A SignPath Foundation free OSS application was declined on
+No. The current official build (v1.5.20) is `NotSigned`. A SignPath Foundation free OSS application was declined on
 2026-11-22 because the project did not yet show enough public visibility or
 community signals. No certificate was issued.
 
@@ -23,7 +23,7 @@ commerce rules, and certification still apply. See
 [Microsoft’s code-signing options](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/code-signing-options).
 
 The full client builds as an MSIX after excluding a redundant `python-docx`
-template folder that uses the OPC-reserved `_rels` names. The v1.5.19 Store
+template folder that uses the OPC-reserved `_rels` names. The v1.5.20 Store
 package was submitted on 2026-11-23 and is currently in Microsoft certification.
 It is not yet publicly available. Once certification passes, Store installs are
 re-signed by Microsoft. Details: [msix.md](msix.md).
@@ -80,7 +80,7 @@ open source. See [LICENSE](../LICENSE).
 
 1. Compare the SHA-256 with the value published on the official website.
 2. Check the Authenticode status:
-   `Get-AuthenticodeSignature .\WenWen_Setup_v1.5.19.exe` — current builds
+   `Get-AuthenticodeSignature .\WenWen_Setup_v1.5.20.exe` — current builds
    return `NotSigned`.
 3. If the hash does not match, do not run the file; report the URL and hash
    through the issue tracker.

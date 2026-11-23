@@ -32,12 +32,14 @@
 - Microsoft Store 商店页（已提交，正在认证）：
   <https://apps.microsoft.com/detail/9P9JJXPMMX1G>
 
-> **签名状态：** v1.5.20 当前为 `NotSigned`，Windows 可能提示“未知发布者”。运行前请核对 SHA-256。v1.5.19 Store MSIX 已于 2026-11-23 提交，正在微软认证；认证通过后商店安装包由微软重签名。
+> **签名状态：** v1.5.20 当前为 `NotSigned`，Windows 可能提示“未知发布者”。运行前请核对 SHA-256。v1.5.20 Store MSIX 已于 2026-11-23 提交，正在微软认证；认证通过后商店安装包由微软重签名。
 
-官方 v1.5.20 安装包 SHA-256：
+安装向导会先展示隐私政策页，必须勾选同意后才能继续；同一文本会安装为 `隐私政策.txt`。
+
+官方 v1.5.20 安装包（87,867,072 字节）SHA-256：
 
 ```text
-68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92
+716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC
 ```
 
 完整校验说明：[docs/VERIFICATION.md](docs/VERIFICATION.md)。

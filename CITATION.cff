@@ -9,7 +9,7 @@ repository-code: "https://github.com/harrisonfu8-design/wenwen-open-source"
 url: "https://sw.olilily.com/en/"
 license: other
 license-url: "https://github.com/harrisonfu8-design/wenwen-open-source/blob/main/LICENSE"
-version: 1.5.19
+version: 1.5.20
 date-released: 2026-11-22
 abstract: >-
   WenWen is a Windows desktop application for content-aware file filing,

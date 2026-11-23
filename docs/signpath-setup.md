@@ -34,7 +34,7 @@ SignPath Foundation 的免费项目面向可公开构建的开源项目。文文
 ## 验证
 
 ```powershell
-Get-AuthenticodeSignature .\文文_安装包_v1.5.19.exe | Format-List Status,SignerCertificate
+Get-AuthenticodeSignature .\文文_安装包_v1.5.20.exe | Format-List Status,SignerCertificate
 ```
 
 当前未签名版本应为 `NotSigned`。证书签发后，`Status` 应为 `Valid`，签名者

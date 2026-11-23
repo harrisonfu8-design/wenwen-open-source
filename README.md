@@ -32,7 +32,11 @@ WenWen is a Windows desktop app for people who keep losing files. Drop a documen
 - Microsoft Store listing (submitted, in certification):
   <https://apps.microsoft.com/detail/9P9JJXPMMX1G>
 
-> **Signing status:** v1.5.20 is currently **unsigned** (`NotSigned`). Windows SmartScreen may show “Unknown publisher”. See [Code signing](#code-signing) below. Verify the SHA-256 hash before running any build. The v1.5.19 Store MSIX was submitted on 2026-11-23 and is in Microsoft certification; Store installs will be re-signed by Microsoft after certification passes.
+> **Signing status:** v1.5.20 is currently **unsigned** (`NotSigned`). Windows SmartScreen may show “Unknown publisher”. See [Code signing](#code-signing) below. Verify the SHA-256 hash before running any build. The v1.5.20 Store MSIX was submitted on 2026-11-23 and is in Microsoft certification; Store installs will be re-signed by Microsoft after certification passes.
+
+The installer displays a privacy policy page before installation; the user must
+select the consent checkbox to continue. The same text is installed as
+`隐私政策.txt` in the install directory.
 
 ## Verify your download
 
@@ -41,10 +45,10 @@ Get-FileHash .\WenWen_Setup_v1.5.20.exe -Algorithm SHA256
 Get-AuthenticodeSignature .\WenWen_Setup_v1.5.20.exe | Format-List Status,StatusMessage,SignerCertificate
 ```
 
-Expected SHA-256 for the official v1.5.20 installer:
+Expected SHA-256 for the official v1.5.20 installer (87,867,072 bytes):
 
 ```text
-68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92
+716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC
 ```
 
 `Status` is expected to be `NotSigned` until a trusted code-signing certificate is issued. Full checks: [docs/VERIFICATION.md](docs/VERIFICATION.md).
@@ -76,7 +80,7 @@ This repository is **semi-open source**, not fully open source. It publishes the
 
 The signing policy is documented in [CODE_SIGNING_POLICY.md](CODE_SIGNING_POLICY.md). In short:
 
-- **No trusted certificate is currently in use.** The v1.5.19 installer and client are `NotSigned`.
+- **No trusted certificate is currently in use.** The v1.5.20 installer and client are `NotSigned`.
 - A closed-core semi-open project is not eligible for the SignPath Foundation OSS program in its current form. A paid code-signing certificate is the realistic path.
 - We will publish the signer identity and verification steps here once a certificate is actually issued.
 

@@ -1,8 +1,10 @@
 # Privacy policy / 隐私政策
 
-Last updated: 2026-11-22
+Last updated: 2026-11-23
 
 文文（FileKeeper）是一个本地优先的 Windows 文件和发票整理工具。本政策说明客户端会处理哪些数据、何时联网，以及数据保存在哪里。
+
+安装向导会展示本政策，用户必须勾选“我已阅读并同意《文文隐私政策》”后才能继续安装；同一文本会安装为 `隐私政策.txt`。在线版本：<https://sw.olilily.com/privacy/>。
 
 ## 1. 本地数据
 

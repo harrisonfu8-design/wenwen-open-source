@@ -2,7 +2,7 @@
 
 ## Supported version
 
-Security fixes are applied to the latest release line. The current public release is `1.5.19.x`.
+Security fixes are applied to the latest release line. The current public release is `1.5.20.x`.
 
 ## Reporting a vulnerability
 
@@ -33,8 +33,8 @@ Out of scope:
 Every release should be built by the GitHub Actions workflow. Current releases are unsigned; no trusted code-signing certificate has been issued. Verify before running:
 
 ```powershell
-Get-AuthenticodeSignature .\文文_安装包_v1.5.19.exe | Format-List Status,SignerCertificate
-Get-FileHash .\文文_安装包_v1.5.19.exe -Algorithm SHA256
+Get-AuthenticodeSignature .\文文_安装包_v1.5.20.exe | Format-List Status,SignerCertificate
+Get-FileHash .\文文_安装包_v1.5.20.exe -Algorithm SHA256
 ```
 
 The download page publishes the SHA-256 of each installer. Current builds are expected to show `Status = NotSigned`. If a trusted certificate is issued later, a valid signature must show `Status = Valid` and a subject matching the certificate published by the project; no such certificate exists today.

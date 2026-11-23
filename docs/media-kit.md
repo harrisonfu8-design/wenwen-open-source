@@ -26,7 +26,7 @@ published, while the core recognition and invoice/OCR algorithms remain closed.
 - Product name: WenWen / 文文
 - Category: Windows desktop productivity; file organizer; invoice ledger
 - Platform: Windows 10/11, x64
-- Current official version: 1.5.19 (unsigned)
+- Current official version: 1.5.20 (unsigned)
 - Client license: WenWen Semi-Open Source License v1.0 (source-available, not OSI open source)
 - Public scope: UI shell, installer, documentation, and client licensing/support UI
 - Closed scope: core recognition, invoice extraction, OCR algorithms, and the
@@ -62,13 +62,13 @@ illustrate the product.
 
 ## Download and verification
 
-- Official installer: <https://sw.olilily.com/dl/WenWen_Setup_v1.5.19.exe>
-- SHA-256: `E6FA60D791AE8414F12F5DA3967E79548025EAEFC4A7D49C20FA36AB4DD8F2E4`
+- Official installer: <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
+- SHA-256: `716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC`
 - Verification: <https://github.com/harrisonfu8-design/wenwen-open-source/blob/main/docs/VERIFICATION.md>
 
 ## Signing status — please state accurately
 
-- v1.5.19 is **`NotSigned`**. Windows SmartScreen may show
+- v1.5.20 is **`NotSigned`**. Windows SmartScreen may show
   “Unknown publisher”.
 - A SignPath Foundation free OSS application was declined on 2026-11-22 for
   insufficient public visibility and community signals. No certificate was

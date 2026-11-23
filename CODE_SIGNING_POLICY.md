@@ -61,11 +61,11 @@ commit, workflow run, artifact, and approver.
 Users can verify a downloaded file in PowerShell:
 
 ```powershell
-Get-AuthenticodeSignature .\文文_安装包_v1.5.19.exe | Format-List Status,StatusMessage,SignerCertificate
-Get-FileHash .\文文_安装包_v1.5.19.exe -Algorithm SHA256
+Get-AuthenticodeSignature .\文文_安装包_v1.5.20.exe | Format-List Status,StatusMessage,SignerCertificate
+Get-FileHash .\文文_安装包_v1.5.20.exe -Algorithm SHA256
 ```
 
-For the current v1.5.19 release, `Status` is expected to be `NotSigned`. A
+For the current v1.5.20 release, `Status` is expected to be `NotSigned`. A
 future signed release must show `Status = Valid` and the actual certificate
 subject. The expected SHA-256 values for current builds are listed in
 [docs/VERIFICATION.md](docs/VERIFICATION.md).

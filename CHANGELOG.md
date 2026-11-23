@@ -9,15 +9,19 @@
   final amount and records the code, discount, and bonus days on the order.
 - Added a backend promo-code management page; bonus days are added to the
   license when payment is confirmed.
+- Added a privacy policy page to the NSIS installer. The user must select the
+  consent checkbox before installation continues; the text is also installed as
+  `隐私政策.txt`.
 - Bumped client, executable metadata, and NSIS installer version to `1.5.20.0`.
 - Official installer:
   <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
-  · SHA-256 `68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92`
+  · 87,867,072 bytes
+  · SHA-256 `716244575637116710FB8A4E749B2E641D81D2AAD9C1CAE714B0485E1998C4EC`
   · `NotSigned`.
 - Prepared Store-identity MSIX `WenWen_1.5.20.0_x64_store.msix`
   (113,699,326 bytes · SHA-256
   `D0C5F8BD1A561F0A8A69E2220BAA5E3D16CF4997D82A3180E83089EE8F139C40`);
-  not yet uploaded to Partner Center.
+  submitted to Partner Center on 2026-11-23 and is in certification.
 
 ## 2026-11-23 — semi-open transition
 
