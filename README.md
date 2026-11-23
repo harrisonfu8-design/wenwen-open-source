@@ -25,26 +25,26 @@ WenWen is a Windows desktop app for people who keep losing files. Drop a documen
 
 ## Download
 
-- Official installer: <https://sw.olilily.com/dl/WenWen_Setup_v1.5.19.exe>
+- Official installer: <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
 - English product page: <https://sw.olilily.com/en/>
 - User guide: <https://sw.olilily.com/guide/>
 - Product page: <https://sw.olilily.com/>
 - Microsoft Store listing (submitted, in certification):
   <https://apps.microsoft.com/detail/9P9JJXPMMX1G>
 
-> **Signing status:** v1.5.19 is currently **unsigned** (`NotSigned`). Windows SmartScreen may show “Unknown publisher”. See [Code signing](#code-signing) below. Verify the SHA-256 hash before running any build. The v1.5.19 Store MSIX was submitted on 2026-11-23 and is in Microsoft certification; Store installs will be re-signed by Microsoft after certification passes.
+> **Signing status:** v1.5.20 is currently **unsigned** (`NotSigned`). Windows SmartScreen may show “Unknown publisher”. See [Code signing](#code-signing) below. Verify the SHA-256 hash before running any build. The v1.5.19 Store MSIX was submitted on 2026-11-23 and is in Microsoft certification; Store installs will be re-signed by Microsoft after certification passes.
 
 ## Verify your download
 
 ```powershell
-Get-FileHash .\WenWen_Setup_v1.5.19.exe -Algorithm SHA256
-Get-AuthenticodeSignature .\WenWen_Setup_v1.5.19.exe | Format-List Status,StatusMessage,SignerCertificate
+Get-FileHash .\WenWen_Setup_v1.5.20.exe -Algorithm SHA256
+Get-AuthenticodeSignature .\WenWen_Setup_v1.5.20.exe | Format-List Status,StatusMessage,SignerCertificate
 ```
 
-Expected SHA-256 for the official v1.5.19 installer:
+Expected SHA-256 for the official v1.5.20 installer:
 
 ```text
-E6FA60D791AE8414F12F5DA3967E79548025EAEFC4A7D49C20FA36AB4DD8F2E4
+68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92
 ```
 
 `Status` is expected to be `NotSigned` until a trusted code-signing certificate is issued. Full checks: [docs/VERIFICATION.md](docs/VERIFICATION.md).

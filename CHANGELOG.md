@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.5.20 — 2026-11-23 (official download, unsigned)
+
+- Added promo-code input to the client registration / renewal window, with
+  apply, clear, and benefit text.
+- Promo codes support percentage discount, fixed discount, bonus license days,
+  total-use limits, per-machine limits, and expiry; the server recalculates the
+  final amount and records the code, discount, and bonus days on the order.
+- Added a backend promo-code management page; bonus days are added to the
+  license when payment is confirmed.
+- Bumped client, executable metadata, and NSIS installer version to `1.5.20.0`.
+- Official installer:
+  <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
+  · SHA-256 `68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92`
+  · `NotSigned`.
+
 ## 2026-11-23 — semi-open transition
 
 - Public repository changed from full MIT open source to **semi-open source**.

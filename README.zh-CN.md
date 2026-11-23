@@ -25,19 +25,19 @@
 
 ## 下载与验证
 
-- 官方安装包：<https://sw.olilily.com/dl/WenWen_Setup_v1.5.19.exe>
+- 官方安装包：<https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
 - 英文产品页：<https://sw.olilily.com/en/>
 - 使用教程：<https://sw.olilily.com/guide/>
 - 产品页：<https://sw.olilily.com/>
 - Microsoft Store 商店页（已提交，正在认证）：
   <https://apps.microsoft.com/detail/9P9JJXPMMX1G>
 
-> **签名状态：** v1.5.19 当前为 `NotSigned`，Windows 可能提示“未知发布者”。运行前请核对 SHA-256。v1.5.19 Store MSIX 已于 2026-11-23 提交，正在微软认证；认证通过后商店安装包由微软重签名。
+> **签名状态：** v1.5.20 当前为 `NotSigned`，Windows 可能提示“未知发布者”。运行前请核对 SHA-256。v1.5.19 Store MSIX 已于 2026-11-23 提交，正在微软认证；认证通过后商店安装包由微软重签名。
 
-官方 v1.5.19 安装包 SHA-256：
+官方 v1.5.20 安装包 SHA-256：
 
 ```text
-E6FA60D791AE8414F12F5DA3967E79548025EAEFC4A7D49C20FA36AB4DD8F2E4
+68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92
 ```
 
 完整校验说明：[docs/VERIFICATION.md](docs/VERIFICATION.md)。
@@ -65,7 +65,7 @@ E6FA60D791AE8414F12F5DA3967E79548025EAEFC4A7D49C20FA36AB4DD8F2E4
 
 完整说明见 [CODE_SIGNING_POLICY.md](CODE_SIGNING_POLICY.md)。要点：
 
-- **当前没有可用的受信任证书**，v1.5.19 为 `NotSigned`。
+- **当前没有可用的受信任证书**，v1.5.20 为 `NotSigned`。
 - 带闭源核心的半开源项目目前不符合 SignPath Foundation 免费开源签名条件；付费证书是现实方案。
 - 在证书真正签发前，不会使用 SignPath Foundation 的签名表述，也不会声称已签名。
 
