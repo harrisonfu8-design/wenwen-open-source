@@ -1,0 +1,51 @@
+name: Feature request
+description: Suggest a focused improvement for WenWen
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the user problem first, then the smallest change that
+        would help. Large redesigns are harder to review and may not fit the
+        local-first model.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: "I have hundreds of scanned invoices and ..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Filing and folder templates
+        - Search and archive records
+        - Invoice ledger
+        - Installer or updates
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This request does not require uploading private file contents.
+          required: true
+        - label: I searched existing issues and discussions first.
+          required: true

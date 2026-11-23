@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# PyInstaller and release outputs
+build/
+dist/
+installer/app/
+release/
+*.spec.bak
+*.exe
+*.zip
+*.7z
+*.msi
+
+# Local runtime data and logs
+backup/
+server_backup/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.tmp
+*.bak
+*.bak_*
+_*.json
+admin_session_regress_*.json
+*_result.json
+
+# Screenshots and local documents
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.webp
+!assets/*.png
+!assets/*.ico
+!installer/*.ico
+!docs/screenshots/*.png
+!docs/social-preview.jpg
+*.pdf
+*.docx
+*.xlsx
+*.csv
+*.md.bak
+
+# Secrets and signing material
+.env
+.env.*
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.pvk
+*.spc
+secrets/
+keys/
+*.keystore
+*.jks
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

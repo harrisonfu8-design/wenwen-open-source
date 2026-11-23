@@ -1,0 +1,64 @@
+WenWen Semi-Open Source License v1.0
+Copyright (c) 2026 WenWen / FileKeeper. All rights reserved.
+
+This repository is source-available, not OSI-approved open source. The public
+and closed portions are defined in docs/OPEN_SOURCE_SCOPE.md.
+
+1. Public source
+   The files that are not listed as Excluded Materials in
+   docs/OPEN_SOURCE_SCOPE.md (the "Public Source") may be viewed, cloned,
+   copied, modified, and built for personal evaluation, learning, research,
+   and non-commercial internal testing. You must keep this license and all
+   copyright, attribution, and proprietary notices with any copy or
+   substantial portion of the Public Source.
+
+2. Excluded materials
+   The core recognition, filing, invoice-extraction, and OCR algorithms; the
+   hosting/licensing backend; private build inputs; signing material; secrets;
+   customer data; and any file marked as closed or proprietary are Excluded
+   Materials. No license, express or implied, is granted for Excluded
+   Materials. You may not reverse engineer, decompile, extract, or attempt to
+   reconstruct Excluded Materials from any binary, bundle, or service.
+
+3. Commercial use
+   Commercial use, paid distribution, or use in a commercial product or
+   service of the Public Source requires prior written permission from the
+   copyright holder. Contact the maintainer through the repository.
+
+4. Redistribution
+   You may redistribute an unmodified copy of the Public Source for
+   non-commercial purposes with this license. You may not redistribute
+   modified Public Source, combine it with closed components, or represent a
+   modified build as an official WenWen build without written permission.
+
+5. No competing or misleading use
+   You may not use the Public Source to create or promote a competing product
+   in a way that implies it includes the WenWen core algorithms, or that it is
+   endorsed by WenWen. The WenWen name, Chinese name 文文, logos, icons, and
+   website content are trademarks and are not licensed by this license.
+
+6. Contributions
+   By submitting a contribution to the Public Source, you grant the project
+   owner a perpetual, worldwide, royalty-free, irrevocable license to use,
+   modify, sublicense, and distribute that contribution in both public and
+   closed portions of the project. You confirm that you have the right to
+   grant that license.
+
+7. Third-party components
+   Third-party libraries, fonts, assets, and tools remain under their own
+   licenses. This license does not override those terms. See the dependency
+   notices and the installer's third-party license files.
+
+8. Termination
+   This license terminates automatically if you breach its terms. On
+   termination you must stop using and destroy all copies of the Public Source.
+
+9. No warranty
+   THE PUBLIC SOURCE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY ARISING FROM THE USE OF THE PUBLIC SOURCE.
+
+For permission requests, open an issue at
+https://github.com/harrisonfu8-design/wenwen-open-source/issues

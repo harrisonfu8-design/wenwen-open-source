@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and build help
+    url: https://github.com/harrisonfu8-design/wenwen-open-source/discussions
+    about: Ask for help, share a reproducible build result, or discuss usage.
+  - name: Security report
+    url: https://github.com/harrisonfu8-design/wenwen-open-source/security/advisories/new
+    about: Report vulnerabilities privately. Do not open a public issue.

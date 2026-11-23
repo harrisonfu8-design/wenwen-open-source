@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible problem with WenWen or the build
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing WenWen. Please remove personal file names, invoice
+        data, account details, and local paths before posting. Security issues
+        should go through SECURITY.md, not this form.
+  - type: input
+    id: version
+    attributes:
+      label: WenWen version
+      description: From Settings, or the installer file name
+      placeholder: "1.5.19"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 23H2, x64"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The shortest sequence that still shows the problem
+      placeholder: |
+        1. Open ...
+        2. Drop ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Remove personal data first. Drag files here or paste text.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed personal data and credentials from this report.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true

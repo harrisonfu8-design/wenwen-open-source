@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use WenWen in research, teaching, or reporting, cite this repository."
+title: "WenWen: a local-first Windows file and invoice organizer"
+type: software
+authors:
+  - family-names: "Fu"
+    given-names: "Harrison"
+repository-code: "https://github.com/harrisonfu8-design/wenwen-open-source"
+url: "https://sw.olilily.com/en/"
+license: other
+license-url: "https://github.com/harrisonfu8-design/wenwen-open-source/blob/main/LICENSE"
+version: 1.5.19
+date-released: 2026-11-22
+abstract: >-
+  WenWen is a Windows desktop application for content-aware file filing,
+  local search, an archive audit trail, and an invoice ledger with duplicate
+  detection and Excel export. The public repository is semi-open: UI shell,
+  installer, documentation, and client licensing/support UI are published,
+  while the core recognition and invoice/OCR algorithms and the hosted backend
+  are closed source.
+keywords:
+  - file organizer
+  - invoice management
+  - document management
+  - desktop application
+  - Windows
+  - Python
+  - local-first
+  - semi-open source
