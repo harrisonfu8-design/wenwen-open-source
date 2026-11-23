@@ -14,6 +14,10 @@
   <https://sw.olilily.com/dl/WenWen_Setup_v1.5.20.exe>
   · SHA-256 `68DF982626EF09829D8EEC5FCB49D362464580B1CE231F3691AE6ABC07DF4C92`
   · `NotSigned`.
+- Prepared Store-identity MSIX `WenWen_1.5.20.0_x64_store.msix`
+  (113,699,326 bytes · SHA-256
+  `D0C5F8BD1A561F0A8A69E2220BAA5E3D16CF4997D82A3180E83089EE8F139C40`);
+  not yet uploaded to Partner Center.
 
 ## 2026-11-23 — semi-open transition
 

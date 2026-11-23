@@ -39,6 +39,19 @@ Store-distributed MSIX packages during the Store publishing pipeline, so a
 successfully certified Store install does not depend on a local self-signed
 certificate. The direct NSIS installer and direct downloads remain `NotSigned`.
 
+## v1.5.20 Store package prepared (not submitted)
+
+A v1.5.20.0 Store-identity package has been built locally from the same full
+client layout, with the `default-docx-template` folder excluded. It has not
+been uploaded to Partner Center; Submission 1 remains the v1.5.19.0 package.
+
+- Package: `WenWen_1.5.20.0_x64_store.msix`
+- Size: 113,699,326 bytes
+- SHA-256: `D0C5F8BD1A561F0A8A69E2220BAA5E3D16CF4997D82A3180E83089EE8F139C40`
+- Version: `1.5.20.0`
+- Architecture: `x64`
+- Local signature: unsigned
+
 ## Layout fix for 0x8007007b
 
 `python-docx` ships an unpacked copy of its default template under:
