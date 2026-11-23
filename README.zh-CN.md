@@ -29,7 +29,7 @@
 - 英文产品页：<https://sw.olilily.com/en/>
 - 使用教程：<https://sw.olilily.com/guide/>
 - 产品页：<https://sw.olilily.com/>
-- Microsoft Store 商店页（已提交，正在认证）：
+- Microsoft Store 商店页（已提交，正在认证；认证完成前公开页不会上线）：
   <https://apps.microsoft.com/detail/9P9JJXPMMX1G>
 
 > **签名状态：** v1.5.20 当前为 `NotSigned`，Windows 可能提示“未知发布者”。运行前请核对 SHA-256。v1.5.20 Store MSIX 已于 2026-11-23 提交，正在微软认证；认证通过后商店安装包由微软重签名。

@@ -29,7 +29,7 @@ WenWen is a Windows desktop app for people who keep losing files. Drop a documen
 - English product page: <https://sw.olilily.com/en/>
 - User guide: <https://sw.olilily.com/guide/>
 - Product page: <https://sw.olilily.com/>
-- Microsoft Store listing (submitted, in certification):
+- Microsoft Store listing (submitted, in certification; the public page is not live until certification completes):
   <https://apps.microsoft.com/detail/9P9JJXPMMX1G>
 
 > **Signing status:** v1.5.20 is currently **unsigned** (`NotSigned`). Windows SmartScreen may show “Unknown publisher”. See [Code signing](#code-signing) below. Verify the SHA-256 hash before running any build. The v1.5.20 Store MSIX was submitted on 2026-11-23 and is in Microsoft certification; Store installs will be re-signed by Microsoft after certification passes.
