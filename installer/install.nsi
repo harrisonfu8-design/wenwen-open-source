@@ -4,27 +4,20 @@ SetCompressor /SOLID lzma
 !include "MUI2.nsh"
 !include "FileFunc.nsh"
 
-!ifndef PRODUCT_VERSION
-  !define PRODUCT_VERSION "1.5.18.0"
-!endif
-!ifndef PRODUCT_VERSION_SHORT
-  !define PRODUCT_VERSION_SHORT "1.5.18"
-!endif
-
 Name "文文"
 Caption "文文 安装程序"
-OutFile "文文_安装包_v${PRODUCT_VERSION_SHORT}.exe"
+OutFile "文文_安装包_v1.5.20.exe"
 InstallDir "$LOCALAPPDATA\Programs\FileKeeper"
 InstallDirRegKey HKCU "Software\FileKeeper" "InstallDir"
 RequestExecutionLevel user
 BrandingText "文文 · 文件和发票整理管家 · 注册版"
 
-VIProductVersion "${PRODUCT_VERSION}"
+VIProductVersion "1.5.20.0"
 VIAddVersionKey "ProductName" "文文"
 VIAddVersionKey "CompanyName" "文文"
 VIAddVersionKey "FileDescription" "文文安装程序"
-VIAddVersionKey "FileVersion" "${PRODUCT_VERSION}"
-VIAddVersionKey "ProductVersion" "${PRODUCT_VERSION}"
+VIAddVersionKey "FileVersion" "1.5.20.0"
+VIAddVersionKey "ProductVersion" "1.5.20.0"
 VIAddVersionKey "LegalCopyright" "Copyright (C) 2026"
 
 !define MUI_ICON "filekeeper.ico"
@@ -68,7 +61,7 @@ Section "安装" SecMain
   CreateShortcut "$DESKTOP\文文.lnk" "$INSTDIR\文件管家.exe" "" "$INSTDIR\filekeeper.ico" 0
 
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "DisplayName" "文文"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "DisplayVersion" "${PRODUCT_VERSION}"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "DisplayVersion" "1.5.20.0"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "Publisher" "文文"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "InstallLocation" "$INSTDIR"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "DisplayIcon" "$INSTDIR\filekeeper.ico"
@@ -81,7 +74,7 @@ Section "安装" SecMain
   WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileKeeper" "EstimatedSize" "$0"
 
   WriteRegStr HKCU "Software\FileKeeper" "InstallDir" "$INSTDIR"
-  WriteRegStr HKCU "Software\FileKeeper" "Version" "${PRODUCT_VERSION}"
+  WriteRegStr HKCU "Software\FileKeeper" "Version" "1.5.20.0"
 SectionEnd
 
 Section "Uninstall"

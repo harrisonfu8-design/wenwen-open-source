@@ -26,7 +26,7 @@ from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 
 # 正式构建不允许用环境变量改写服务器或公钥，否则等于留下一条自助绕过授权的后门。
 SERVER = "https://sw.olilily.com"
-VERSION = "1.5.18.0"
+VERSION = "1.5.20.0"
 APP_DIR = os.path.join(os.environ.get("APPDATA") or os.path.expanduser("~"), "FileKeeper")
 STATE_PATH = os.path.join(APP_DIR, "license.json")
 BRAND_PATH = os.path.join(APP_DIR, "brand_logo.png")
@@ -284,11 +284,32 @@ def support_messages(after: int = 0, version: str = "") -> dict:
     return _get("/api/support/messages?" + query)
 
 
-def order_create(months: int = 1) -> dict:
+def order_create(months: int = 1, promo_code: str = "") -> dict:
     data = _load()
     payload = {"machine": machine_id(), "months": months,
                "code": data.get("code", "")}
+    promo = (promo_code or "").strip()
+    if promo:
+        payload["promo_code"] = promo
     return _post("/api/order", payload)
+
+
+def promo_validate(code: str, months: int = 1) -> dict:
+    code = (code or "").strip()
+    if not code:
+        return {"ok": False, "error": "请输入推广码"}
+    try:
+        return _post("/api/promo/validate", {
+            "machine": machine_id(), "months": months, "code": code,
+        })
+    except urllib.error.HTTPError as exc:
+        try:
+            body = json.loads(exc.read().decode("utf-8") or "{}")
+        except Exception:
+            body = {}
+        return {"ok": False, "error": body.get("error") or f"校验失败（HTTP {exc.code}）"}
+    except Exception as exc:
+        return {"ok": False, "error": f"无法连接授权服务：{exc}"}
 
 
 def order_status(order_no: str) -> dict:

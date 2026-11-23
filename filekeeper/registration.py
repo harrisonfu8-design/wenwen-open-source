@@ -50,6 +50,8 @@ class RegistrationDialog(tk.Toplevel):
         self._creating = False
         self._poll_job = None
         self._support_dlg = None
+        self._promo_info: dict = {}
+        self.v_promo = tk.StringVar()
         self.title(f"{core.APP_NAME} · 注册 / 续费")
         self.configure(bg=BG)
         self.transient(root)
@@ -114,6 +116,21 @@ class RegistrationDialog(tk.Toplevel):
         self.lbl_state.grid(row=5, column=0, sticky="w")
         self.lbl_remain = tk.Label(grid, text="", bg=CARD, fg=MUTED, font=(FONT, 9))
         self.lbl_remain.grid(row=6, column=0, sticky="w", pady=(2, 0))
+
+        # 推广码
+        promo = tk.Frame(inner, bg=CARD, highlightthickness=1, highlightbackground=BORDER)
+        promo.pack(fill="x", pady=(10, 0))
+        tk.Label(promo, text="推广码（可选）", bg=CARD, fg=MUTED, font=(FONT, 9),
+                 anchor="w").pack(fill="x", padx=16, pady=(12, 2))
+        prow = tk.Frame(promo, bg=CARD)
+        prow.pack(fill="x", padx=16)
+        ttk.Entry(prow, textvariable=self.v_promo, width=24).pack(side="left")
+        self._btn(prow, "应用", self._apply_promo, primary=True).pack(side="left", padx=(8, 0))
+        self._btn(prow, "清除", self._clear_promo).pack(side="left", padx=(6, 0))
+        self.lbl_promo = tk.Label(promo, text="有推广码可在此输入，应用后按优惠价付款。",
+                                  bg=CARD, fg=MUTED, font=(FONT, 9), anchor="w",
+                                  justify="left", wraplength=540)
+        self.lbl_promo.pack(fill="x", padx=16, pady=(4, 12))
 
         # 付款
         pay = tk.Frame(inner, bg=CARD, highlightthickness=1, highlightbackground=BORDER)
@@ -192,7 +209,18 @@ class RegistrationDialog(tk.Toplevel):
             else "试用 24 小时结束后需订阅；扫码支付后由后台确认开通。")
         price = float(ev.get("price") or 9.9)
         days = int(ev.get("days") or 30)
-        self.lbl_price.configure(text=f"订阅价格：¥{price:.2f} / {days} 天（扫码支付）")
+        promo = self._promo_info or {}
+        if promo.get("ok"):
+            final = float(promo.get("final_amount") or price)
+            self.lbl_price.configure(
+                text=f"原价 ¥{price:.2f} / {days} 天 → 推广价 ¥{final:.2f}（{promo.get('benefit_text', '')}）")
+            self.lbl_promo.configure(
+                text=f"已应用 {promo.get('code', '')}：应付 ¥{final:.2f}，"
+                     f"确认收款后额外赠送 {int(promo.get('bonus_days') or 0)} 天。",
+                fg=OK)
+        else:
+            self.lbl_price.configure(text=f"订阅价格：¥{price:.2f} / {days} 天（扫码支付）")
+            self.lbl_promo.configure(text="有推广码可在此输入，应用后按优惠价付款。", fg=MUTED)
         self.lbl_notice.configure(text=ev.get("notice") or "扫码支付后点击「我已完成支付」，后台确认到账即自动开通。")
         self.result_valid = bool(ev["valid"])
         self.btn_close.configure(text="继续使用" if ev["valid"] else "退出")
@@ -253,6 +281,30 @@ class RegistrationDialog(tk.Toplevel):
             pass
 
     # ------------------------------------------------------------ 订单
+    def _apply_promo(self) -> None:
+        code = self.v_promo.get().strip().upper()
+        if not code:
+            self._flash_order("请输入推广码后再应用")
+            return
+        self.lbl_promo.configure(text="正在校验推广码…", fg=MUTED)
+        self.update_idletasks()
+        res = lic.promo_validate(code, 1)
+        if not res.get("ok"):
+            self._promo_info = {}
+            self.lbl_promo.configure(text=res.get("error") or "推广码不可用", fg=DANGER)
+            self._flash_order(res.get("error") or "推广码不可用")
+            return
+        self._promo_info = res
+        self.v_promo.set(str(res.get("code") or code))
+        self.refresh_display()
+        self._flash_order(f"推广码已应用：应付 ¥{float(res.get('final_amount') or 0):.2f}")
+
+    def _clear_promo(self) -> None:
+        self.v_promo.set("")
+        self._promo_info = {}
+        self.refresh_display()
+        self._flash_order("已清除推广码")
+
     def _create_order(self) -> None:
         if self._creating:
             return
@@ -261,7 +313,7 @@ class RegistrationDialog(tk.Toplevel):
         self._flash_order("正在生成专属付款号，请稍候…")
         self.update_idletasks()
         try:
-            o = lic.order_create(1)
+            o = lic.order_create(1, promo_code=self.v_promo.get().strip())
             order_no = str(o.get("order_no") or "").strip()
             if not order_no:
                 raise ValueError("服务端未返回订单号")
